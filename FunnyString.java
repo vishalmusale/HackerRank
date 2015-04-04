@@ -9,19 +9,46 @@ public class Solution {
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         
+    	
+    	// Declaration
     	Scanner s = new Scanner(System.in);
-    	String str1 = s.nextLine();
-    	String str2 = s.nextLine();
-    	String str3 = s.nextLine();
+    	int no = s.nextInt();
+    	String[] str = new String[no];
+    	String[] revstr = new String[no];
     	
-    	String revstr2 = StringRev(str2);
-    	String revstr3 = StringRev(str3);
+    	// Initialization
+    	for(int i = 1; i<= no; i++)
+    	{
+    		str[i] = s.nextLine();
+    	}
     	
-    	System.out.println(FunnyOrNot(str2,revstr2));
-    	System.out.println(FunnyOrNot(str3,revstr3));
+    	// Reverse String
+    	for(int i = 1; i<= no; i++)
+    	{
+    		revstr[i] = StringRev(str[i]);
+    	}
     	
-    	//System.out.println(revstr);
+    	// Answer and output
+    	for(int i = 1; i<= no; i++)
+    	{
+    		System.out.println(FunnyOrNot(str[i],revstr[i]));
+    	}
     }
+    
+
+	private static String StringRev(String str) 
+	{
+		// TODO Auto-generated method stub
+		
+		String rev = "";
+		
+		for(int i=str.length() -1; i>=0; i--)
+		{
+			rev += str.charAt(i);
+		}
+			
+		return rev;
+	}
 
 	private static String FunnyOrNot(String str, String revstr) {
 		// TODO Auto-generated method stub
@@ -45,17 +72,4 @@ public class Solution {
 			return "Not Funny";
 	}
 
-	private static String StringRev(String str) 
-	{
-		// TODO Auto-generated method stub
-		
-		String rev = "";
-		
-		for(int i=str.length() -1; i>=0; i--)
-		{
-			rev += str.charAt(i);
-		}
-			
-		return rev;
-	}
 }
