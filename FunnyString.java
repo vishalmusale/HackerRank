@@ -13,26 +13,29 @@ public class Solution {
     	// Declaration
     	Scanner s = new Scanner(System.in);
     	int no = s.nextInt();
+    	no++;
     	String[] str = new String[no];
     	String[] revstr = new String[no];
     	
     	// Initialization
-    	for(int i = 1; i<= no; i++)
+    	for(int i = 0; i< no; i++)
     	{
     		str[i] = s.nextLine();
     	}
     	
+    	
     	// Reverse String
-    	for(int i = 1; i<= no; i++)
+    	for(int i = 0; i< no; i++)
     	{
     		revstr[i] = StringRev(str[i]);
     	}
     	
     	// Answer and output
-    	for(int i = 1; i<= no; i++)
+    	for(int i = 1; i< no; i++)
     	{
     		System.out.println(FunnyOrNot(str[i],revstr[i]));
     	}
+    	
     }
     
 
