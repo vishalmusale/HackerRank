@@ -7,8 +7,10 @@
      Node next;
   }
 */
-    // This is a "method-only" submission. 
-    // You only need to complete this method. 
+
+// This is a "method-only" submission. 
+// You only need to complete this method. 
+
 Node Reverse(Node head) {
     
     if(head == null || head.next == null)
@@ -20,6 +22,6 @@ Node Reverse(Node head) {
         
         head = Reverse(tempNext);
         tempNext.next = curNode;
-        return head;   
-    }
+        return head;
+		}
 }
